@@ -1,0 +1,10 @@
+(function () {
+  var toggle = document.querySelector("[data-menu-toggle]");
+  var nav = document.querySelector("[data-mobile-nav]");
+  if (!toggle || !nav) return;
+  toggle.addEventListener("click", function () {
+    var open = nav.classList.toggle("is-open");
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  });
+})();
