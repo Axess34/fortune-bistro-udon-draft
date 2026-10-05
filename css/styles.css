@@ -174,6 +174,47 @@ ul { margin: 0; padding: 0; list-style: none; }
     rgba(12,11,10,0.96) 100%
   );
 }
+/* Wide patio hero — show atmosphere; light overlay so branded left + neon stay readable */
+.hero--patio {
+  min-height: min(78vh, 640px);
+}
+.hero--patio .hero-media img {
+  opacity: 0.92;
+  object-position: 58% center; /* favor patio, pastry case, pizza oven */
+}
+.hero--patio .hero-media::after {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(12,11,10,0.18) 0%,
+      rgba(12,11,10,0.28) 42%,
+      rgba(12,11,10,0.55) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(12,11,10,0.22) 0%,
+      rgba(12,11,10,0.35) 40%,
+      rgba(12,11,10,0.92) 100%
+    );
+}
+.hero--patio .hero-content {
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: 0;
+  text-align: left;
+  padding: 2.5rem 0 3rem;
+}
+.hero--patio .hero-lead { max-width: 32rem; color: rgba(245, 235, 224, 0.92); }
+.hero--patio h1 {
+  text-shadow: 0 2px 24px rgba(0,0,0,0.55);
+}
+@media (max-width: 767px) {
+  .hero--patio .hero-media img { object-position: 72% center; }
+  .hero--patio .hero-content {
+    margin-left: 0;
+    max-width: none;
+  }
+}
 .hero-content {
   position: relative; z-index: 1;
   padding: 3rem 0 3.5rem;
